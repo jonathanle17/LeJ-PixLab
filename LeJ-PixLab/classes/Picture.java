@@ -234,9 +234,10 @@ public class Picture extends SimplePicture
       Pixel[][] pixels = this.getPixels2D();
       for (Pixel [] rowArray : pixels) {
           for (Pixel gpixel : rowArray) {
-              gpixel.setBlue((pixel.getBlue() + pixel.getRed()));
-              gpixel.setRed();
-              gpixel.SetGreen();
+              int grey = (gpixel.getBlue() + gpixel.getRed() + gpixel.getGreen()) / 3;
+              gpixel.setBlue(grey);
+              gpixel.setRed(grey);
+              gpixel.setGreen(grey);
           }
       }
   }

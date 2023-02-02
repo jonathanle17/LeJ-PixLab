@@ -54,11 +54,18 @@ public class PictureTester
   }
   
   public static void testNegate() {
-    Picture beach = new Picture("formal.jpg");
-    beach.explore();
-    beach.negate();
-    beach.explore();
+    Picture formal = new Picture("formal.jpg");
+    formal.explore();
+    formal.negate();
+    formal.explore();
      
+  }
+  
+  public static void testGreyscale() {
+      Picture formal = new Picture("formal.jpg");
+      formal.explore();
+      formal.greyscale();
+      formal.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -73,7 +80,7 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     testNegate();
-    testGrayscale();
+    testGreyscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
