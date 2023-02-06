@@ -242,6 +242,10 @@ public class Picture extends SimplePicture
       }
   }
   
+  public void mirrorRighttoLeft() {
+      
+  }
+  
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
