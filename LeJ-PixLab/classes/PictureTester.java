@@ -38,7 +38,7 @@ public class PictureTester
   
   public static void testMirrorHorizontal() 
   {
-      Picture motorcycle = new Picture("redMotorcycle.jpg");
+      Picture motorcycle = new Picture("snowman.jpg");
       motorcycle.explore();
       motorcycle.mirrorHorizontal();
       motorcycle.explore();
@@ -52,6 +52,14 @@ public class PictureTester
       motorcycle.explore();
   }
   
+  public static void testMirrorDiagonal() 
+  {
+      Picture beach = new Picture("beach.jpg");
+      beach.explore();
+      beach.mirrorDiagonal();
+      beach.explore();
+  }
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -59,6 +67,14 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  public static void testMirrorArms()
+  {
+      Picture snowman = new Picture("snowman.jpg");
+      snowman.explore();
+      snowman.mirrorArms();
+      snowman.explore();
   }
   
   /** Method to test the collage method */
@@ -110,8 +126,9 @@ public class PictureTester
     testMirrorVerticalRightToLeft();
     testMirrorHorizontal();
     testMirrorHorizontalBotToTop();
+    testMirrorDiagonal();
     //testMirrorTemple();
-    //testMirrorArms();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
