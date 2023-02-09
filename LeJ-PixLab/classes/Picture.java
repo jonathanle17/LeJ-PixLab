@@ -314,6 +314,36 @@ public class Picture extends SimplePicture
             }
         }
     }
+    
+    public void mirrorGull() {
+        int mirrorPoint = 343;
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int count = 0;
+        Pixel [][] pixels = this.getPixels2D();
+        
+        for (int row = 235; row < 320; row++) {
+            for (int col = 239; col < mirrorPoint; col++) {
+                leftPixel = pixels[row][col];
+                rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+                rightPixel.setColor(leftPixel.getColor());
+            }
+        }
+    }
+    
+    public void myCollage() {
+       Picture formal = new Picture("formal.jpg");
+        this.copy(formal,0,0);
+        this.copy(formal,100,0);
+        this.copy(formal,200,0);
+        Picture formalNegate = new Picture(formal);
+        formalNegate.negate();
+        this.copy(formalNegate,300,0);
+        this.copy(formal,400,0);
+        this.copy(formal,500,0);
+        this.mirrorVertical();
+        this.write("collage.jpg"); 
+    }
 
     /* Main method for testing - each class in Java can have a main 
      * method 
